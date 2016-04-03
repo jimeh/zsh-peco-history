@@ -1,15 +1,16 @@
 # zsh-peco-history
 
-Search shell `history` with [peco][] when pressing ctrl+r.
+Search shell history with [peco][] when pressing ctrl+r.
 
-Based on: https://github.com/mooz/percol#zsh-history-search
+Based on [zsh-history-search](https://github.com/mooz/percol#zsh-history-search)
+snippet from [percol](https://github.com/mooz/percol).
 
 ![screenshot](https://github.com/jimeh/zsh-peco-history/raw/master/screenshot.png)
 
 ## Requirements
 
-- [Peco][].
-- [Zsh][].
+- [Peco][]
+- [Zsh][]
 
 [zsh]: http://www.zsh.org/
 [peco]: https://github.com/peco/peco
@@ -47,6 +48,16 @@ Based on: https://github.com/mooz/percol#zsh-history-search
     ```
 
 3. Start a new terminal session.
+
+### [Zplug](https://github.com/b4b4r07/zplug)
+
+1. Add a zplug definition for zsh-peco-history to your `.zshrc`:
+
+    ```sh
+    zplug "jimeh/zsh-peco-history"
+    ```
+
+2. Start a new terminal session.
 
 ### [Antigen](https://github.com/zsh-users/antigen)
 
