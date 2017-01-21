@@ -12,7 +12,7 @@ if which peco &> /dev/null; then
       (($+commands[tac])) && tac="tac" || \
       tac="tail -r"
     BUFFER=$(fc -l -n 1 | eval $tac | \
-               peco --layout=bottom-up --query "$LBUFFER")
+               peco $ZSH_PECO_HISTORY_OPTS --query "$LBUFFER")
     CURSOR=$#BUFFER # move cursor
     zle -R -c       # refresh
   }
