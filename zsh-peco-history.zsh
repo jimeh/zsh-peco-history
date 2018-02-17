@@ -8,9 +8,13 @@
 if which peco &> /dev/null; then
   function peco_select_history() {
     local tac
-    ((($+commands[gtac])) && tac="gtac") || \
-      (($+commands[tac])) && tac="tac" || \
+    if (( $+commands[gtac] )); then
+      tac="gtac"
+    elif (( $+commands[tac] )); then
+      tac="tac"
+    else
       tac="tail -r"
+    fi
     BUFFER=$(fc -l -n 1 | eval $tac | \
                peco --layout=bottom-up --query "$LBUFFER")
     CURSOR=$#BUFFER # move cursor
