@@ -10,7 +10,7 @@ if which peco &> /dev/null; then
     local tac
     (($+commands[gtac])) && tac="gtac" || { (($+commands[tac])) && tac="tac" \
         || { tac="tail -r" }}
-    BUFFER=$(fc -l -n 1 | eval $tac | \
+    BUFFER=$(fc -l -n 1 | eval $tac | awk '!x[$0]++' | \
                peco --layout=bottom-up --query "$LBUFFER")
     CURSOR=$#BUFFER # move cursor
     zle -R -c       # refresh
