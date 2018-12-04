@@ -1,9 +1,13 @@
 # zsh-peco-history
+#
 # Search shell history with peco when pressing ctrl+r.
 # https://github.com/jimeh/zsh-peco-history
 #
+# Requirements:
+#  - peco: https://github.com/peco/peco
+#  - tac, or tail with support for -r option
+#
 # Based on: https://github.com/mooz/percol#zsh-history-search
-# Get peco from: https://github.com/peco/peco
 
 if which peco &> /dev/null; then
   function peco_select_history() {
