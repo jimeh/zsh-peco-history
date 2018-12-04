@@ -12,9 +12,22 @@
 if which peco &> /dev/null; then
   function peco_select_history() {
     local tac
-    (($+commands[gtac])) && tac="gtac" || { (($+commands[tac])) && tac="tac" \
-        || { tac="tail -r" }}
-    BUFFER=$(fc -l -n 1 | eval $tac | \
+    local uniq
+    if (( $+commands[gtac] )); then
+      tac="gtac"
+    elif (( $+commands[tac] )); then
+      tac="tac"
+    else
+      tac="tail -r"
+    fi
+    if (( $+commands[perl] )); then
+      uniq="perl -ne 'print unless \$seen{\$_}++'"
+    elif (( $+commands[awk] )); then
+      uniq="awk '!seen[\$0]++'"
+    else
+      uniq="uniq"
+    fi
+    BUFFER=$(fc -l -n 1 | eval $tac | eval $uniq | \
                peco --layout=bottom-up --query "$LBUFFER")
     CURSOR=$#BUFFER # move cursor
     zle -R -c       # refresh
