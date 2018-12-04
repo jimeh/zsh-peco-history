@@ -18,9 +18,9 @@ snippet from [percol](https://github.com/mooz/percol).
 ## Requirements
 
 - [peco](https://github.com/peco/peco)
-- [psh](http://www.zsh.org/)
+- [zsh](https://www.zsh.org/)
 - `tac`, or `tail` with support for `-r` option.
-- `perl`, `awk`, or `uniq` for if de-duplication is turned on.
+- `perl`, `awk`, or `uniq` if de-duplication is turned on.
 
 ## Installation
 
@@ -131,4 +131,4 @@ what my `~/.peco/config.json` file looks like:
 
 ## License
 
-[CC0 1.0 Universal](http://creativecommons.org/publicdomain/zero/1.0/)
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)

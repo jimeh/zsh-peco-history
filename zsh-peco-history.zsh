@@ -5,8 +5,9 @@
 #
 # Requirements:
 #  - peco: https://github.com/peco/peco
+#  - zsh: https://www.zsh.org/
 #  - tac, or tail with support for -r option
-#  - perl, awk, or uniq for if de-duplication is turned on
+#  - perl, awk, or uniq if de-duplication is turned on
 #
 # Based on: https://github.com/mooz/percol#zsh-history-search
 
