@@ -1,19 +1,25 @@
 # zsh-peco-history
 
-Search shell history with [peco][] when pressing ctrl+r.
+Search shell history with [peco](https://github.com/peco/peco) when pressing
+ctrl+r.
 
 Based on [zsh-history-search](https://github.com/mooz/percol#zsh-history-search)
 snippet from [percol](https://github.com/mooz/percol).
 
 ![screenshot](https://github.com/jimeh/zsh-peco-history/raw/master/screenshot.png)
 
+## Usage
+
+1. Press ctrl+r while in a zsh shell and it should load up peco with your
+   shell's history.
+2. Start typing to filter history down.
+3. Press enter/return to pick a command from history.
+
 ## Requirements
 
-- [Peco][]
-- [Zsh][]
-
-[zsh]: http://www.zsh.org/
-[peco]: https://github.com/peco/peco
+- [peco](https://github.com/peco/peco)
+- [psh](http://www.zsh.org/)
+- `tac`, or `tail` with support for `-r` option.
 
 ## Installation
 
@@ -29,22 +35,6 @@ snippet from [percol](https://github.com/mooz/percol).
 
     ```sh
     source ~/.zsh/zsh-peco-history/zsh-peco-history.zsh
-    ```
-
-3. Start a new terminal session.
-
-### [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
-
-1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
-
-    ```sh
-    git clone https://github.com/jimeh/zsh-peco-history.git $ZSH_CUSTOM/plugins/zsh-peco-history
-    ```
-
-2. Add the plugin to the list of plugins for Oh My Zsh to load:
-
-    ```sh
-    plugins=(zsh-peco-history)
     ```
 
 3. Start a new terminal session.
@@ -69,12 +59,22 @@ snippet from [percol](https://github.com/mooz/percol).
 
 2. Start a new terminal session.
 
-## Usage
+### [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-1. Press ctrl+r while in a zsh shell and it should load up peco with your
-shell's history.
-2. Start typing to filter history down.
-3. Press enter/return to pick a command from history.
+1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default
+   `~/.oh-my-zsh/custom/plugins`)
+
+    ```sh
+    git clone https://github.com/jimeh/zsh-peco-history.git $ZSH_CUSTOM/plugins/zsh-peco-history
+    ```
+
+2. Add the plugin to the list of plugins for Oh My Zsh to load:
+
+    ```sh
+    plugins=(zsh-peco-history)
+    ```
+
+3. Start a new terminal session.
 
 ### Recommended Peco Config
 
