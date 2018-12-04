@@ -10,7 +10,7 @@
 #
 # Based on: https://github.com/mooz/percol#zsh-history-search
 
-if which peco &> /dev/null; then
+if (( $+commands[peco] )); then
   function peco_select_history() {
     local parse_cmd
 
