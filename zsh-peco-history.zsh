@@ -1,4 +1,4 @@
-# zsh-peco-history 0.9.1
+# zsh-peco-history 0.10.0
 #
 # Search shell history with peco when pressing ctrl+r.
 # https://github.com/jimeh/zsh-peco-history
