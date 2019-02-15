@@ -32,7 +32,7 @@ snippet from [percol](https://github.com/mooz/percol).
     git clone https://github.com/jimeh/zsh-peco-history.git ~/.zsh/zsh-peco-history
     ```
 
-2. Add the following to your `.zshrc`:
+2. Add the following to the end of your `.zshrc`:
 
     ```sh
     source ~/.zsh/zsh-peco-history/zsh-peco-history.zsh
@@ -45,14 +45,15 @@ snippet from [percol](https://github.com/mooz/percol).
 1. Add a zplug definition for zsh-peco-history to your `.zshrc`:
 
     ```sh
-    zplug "jimeh/zsh-peco-history"
+    zplug "jimeh/zsh-peco-history", defer:2
     ```
 
 2. Start a new terminal session.
 
 ### [Antigen](https://github.com/zsh-users/antigen)
 
-1. Add a antigen bundle definition for zsh-peco-history to your `.zshrc`:
+1. Add a antigen bundle definition for zsh-peco-history to the end of the
+   antigen setup in your `.zshrc`:
 
     ```sh
     antigen bundle jimeh/zsh-peco-history
