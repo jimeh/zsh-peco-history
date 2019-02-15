@@ -12,6 +12,10 @@
 # Based on: https://github.com/mooz/percol#zsh-history-search
 
 if (( $+commands[peco] )); then
+  if ! (( ${+ZSH_PECO_HISTORY_OPTS} )); then
+    ZSH_PECO_HISTORY_OPTS="--layout=bottom-up"
+  fi
+
   function peco_select_history() {
     local parse_cmd
 
@@ -34,7 +38,7 @@ if (( $+commands[peco] )); then
     fi
 
     BUFFER=$(fc -l -n 1 | eval $parse_cmd | \
-               peco $ZSH_PECO_HISTORY_OPTS --query "$LBUFFER")
+               peco ${=ZSH_PECO_HISTORY_OPTS} --query "$LBUFFER")
 
     CURSOR=$#BUFFER # move cursor
     zle -R -c       # refresh
