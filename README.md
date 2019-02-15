@@ -79,6 +79,21 @@ snippet from [percol](https://github.com/mooz/percol).
 
 ## Configuration Options
 
+### `ZSH_PECO_HISTORY_OPTS`
+
+Command-line arguments passed to `peco`. Defaults to `--layout=bottom-up` if the
+variable is not set.
+
+A lot of the Peco options available on the command-line, are also available via
+Peco's config file. It's up to you how you want to manage your Peco settings.
+
+For example, if you want to use the `bottom-up` layout, and change to fuzzy
+filtering:
+
+```bash
+ZSH_PECO_HISTORY_OPTS="--layout=bottom-up --initial-filter=Fuzzy"
+```
+
 ### `ZSH_PECO_HISTORY_DEDUP`
 
 De-duplicates all history entries before they are handed over to peco. Disabled
