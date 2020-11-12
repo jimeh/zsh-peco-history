@@ -38,7 +38,8 @@ if (( $+commands[peco] )); then
     fi
 
     BUFFER=$(fc -l -n 1 | eval $parse_cmd | \
-               peco ${=ZSH_PECO_HISTORY_OPTS} --query "$LBUFFER")
+               peco ${=ZSH_PECO_HISTORY_OPTS} --query "$LBUFFER" | sed -e 's/\\\\n/\
+/g')
 
     CURSOR=$#BUFFER # move cursor
     zle -R -c       # refresh
