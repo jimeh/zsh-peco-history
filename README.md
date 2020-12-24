@@ -67,7 +67,7 @@ snippet from [percol](https://github.com/mooz/percol).
    `~/.oh-my-zsh/custom/plugins`)
 
     ```sh
-    git clone https://github.com/jimeh/zsh-peco-history.git $ZSH_CUSTOM/plugins/zsh-peco-history
+    git clone https://github.com/jimeh/zsh-peco-history.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-peco-history
     ```
 
 2. Add the plugin to the list of plugins for Oh My Zsh to load:
